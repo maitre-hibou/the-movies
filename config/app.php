@@ -123,4 +123,14 @@ return [
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
 
+    /*
+    |--------------------------------------------------------------------------
+    | User defined application config
+    |--------------------------------------------------------------------------
+    |
+    | These configuration options are specific to The Movies
+    |
+    */
+
+    'the_movies_api_key' => env('THE_MOVIES_API_KEY'),
 ];
