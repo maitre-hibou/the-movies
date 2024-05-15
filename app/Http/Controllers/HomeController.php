@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Movie;
 use App\Models\TrendingPositionPeriod;
+use App\Service\External\TheMovieDb\Utils;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -18,6 +18,7 @@ final class HomeController extends Controller
         };
 
         $movies = DB::table('movies')
+            ->select('movies.*')
             ->join('trending_positions', 'movies.id', '=', 'trending_positions.movie_id')
             ->where('trending_positions.period_type', '=', $periodType)
             ->where('trending_positions.period', '=', $period)
