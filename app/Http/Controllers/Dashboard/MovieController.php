@@ -10,10 +10,12 @@ final class MovieController extends Controller
 {
     public function list(): View
     {
-        $movies = Movie::all();
+        $totalMoviesPage = ceil(Movie::count() / 10);
+        $movies = Movie::paginate(10);
 
         return view('dashboard.movies.list', [
             'movies' => $movies,
+            'totalMoviesPage' => $totalMoviesPage,
         ]);
     }
 }

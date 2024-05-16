@@ -22,6 +22,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     })->name('dashboard');
 
     Route::get('/dashboard/movies', [DashboardMovieController::class, 'list'])->name('dashboard.movies.list');
+    Route::get('/dashboard/movies/edit/{id}', [DashboardMovieController::class, 'edit'])->name('dashboard.movies.edit');
 });
 
 require __DIR__.'/auth.php';
