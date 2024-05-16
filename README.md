@@ -11,6 +11,8 @@ Sample movies listing application built with Laravel.
 
 Inside your project directory :
 
+- Run `make prepare` to initialize packages installation and `.env` file.
+- In your `.env` file, insert your themoviedb.org API key in the variable `THEMOVIEDB_API_KEY`
 - Run `make start`
 - Install project with `make install`
 
