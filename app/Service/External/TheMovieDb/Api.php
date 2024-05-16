@@ -24,7 +24,7 @@ final class Api
         $this->client = new Client([
             'base_uri' => self::API_ENDPOINT_URI,
             'headers' => [
-                'Authorization' => sprintf('Bearer %s', Config::get('app.the_movies_api_key')),
+                'Authorization' => sprintf('Bearer %s', Config::get('app.themoviedb_api_key')),
             ],
         ]);
     }

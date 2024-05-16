@@ -132,5 +132,5 @@ return [
     |
     */
 
-    'the_movies_api_key' => env('THE_MOVIES_API_KEY'),
+    'themoviedb_api_key' => env('THEMOVIEDB_API_KEY'),
 ];
