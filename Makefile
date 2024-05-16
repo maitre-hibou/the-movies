@@ -18,6 +18,7 @@ down: prepare
 
 install:
 	${SAIL_EXEC} artisan migrate
+	${SAIL_EXEC} artisan db:seed
 	${SAIL_EXEC} npm install
 	${SAIL_EXEC} npm run build
 

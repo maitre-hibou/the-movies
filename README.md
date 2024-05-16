@@ -17,3 +17,15 @@ Inside your project directory :
 - Install project with `make install`
 
 Access your project to [http://the-movies.local](http://the-movies.local)
+
+## Pulling trending movies
+
+To visualize movies on the front page, it is necessary to pull data from TheMovieDb.org API.
+
+To do so, there is an artisan command :
+
+`./vendor/bin/sail artisan app:movies:get-trending`
+
+Run it and choose whether you want movies trending for the day, or the week.
+
+Once it is done, you will be able to see movies on the front page depending on the time period you selected.
